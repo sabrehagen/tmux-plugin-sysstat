@@ -4,6 +4,7 @@ CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source "$CURRENT_DIR/scripts/helpers.sh"
 
 placeholders=(
+  "\#{sysstat_bat}"
   "\#{sysstat_cpu}"
   "\#{sysstat_mem}"
   "\#{sysstat_swap}"
@@ -11,6 +12,7 @@ placeholders=(
 )
 
 commands=(
+  "#($CURRENT_DIR/scripts/bat.sh)"
   "#($CURRENT_DIR/scripts/cpu.sh)"
   "#($CURRENT_DIR/scripts/mem.sh)"
   "#($CURRENT_DIR/scripts/swap.sh)"
